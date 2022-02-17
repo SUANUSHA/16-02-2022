@@ -1,0 +1,32 @@
+#include <stdio.h>
+int *fun1(int,int); // pointer to function
+int (*pfun2)(int,int); // function pointer
+int add(int ,int);
+int sub(int ,int);
+int Add;
+int main()
+{
+  int a=5,b=3,r;
+  int sum=*fun1(a,b);
+  printf("sum=%d\n",sum);
+  pfun2=add;
+  r=pfun2(a,b);
+  printf("add=%d\n",r);
+  pfun2=sub;
+  r=pfun2(a,b);
+  printf("sub=%d\n",r);
+  return 0;
+}
+  int *fun1(int x,int y)
+  {
+    Add=x+y;
+    return &Add;
+  }
+  int add(int a1,int b1)
+  {
+    return a1+b1;
+  }
+  int sub(int a2,int b2)
+  {
+     return a2-b2;
+  }
