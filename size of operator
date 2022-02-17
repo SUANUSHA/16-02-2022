@@ -1,0 +1,16 @@
+#include<stdio.h>
+#define my_sizeof(type) (char *)(&type+1)-(char*)(&type)
+int main()
+{
+  double x;
+  int y;
+  char ch;
+  short int z;
+  long int l;
+  printf("int=%ld\n", my_sizeof(y));
+  printf("short int=%ld\n", my_sizeof(z));
+  printf("char=%ld\n", my_sizeof(ch));
+  printf("long int=%ld\n", my_sizeof(l));
+  printf("double=%ld\n", my_sizeof(x));
+  return 0;
+}
